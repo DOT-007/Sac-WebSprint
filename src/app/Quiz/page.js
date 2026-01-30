@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export default function Quiz() {
@@ -157,6 +158,19 @@ export default function Quiz() {
           <h2 className={`text-2xl font-bold ${score >= 10 ? "text-green-400" : "text-red-400"}`}>
             {score >= 10 ? "WON" : "FAIL ❌"}
           </h2>
+
+          <div className="mt-6 rounded-2xl border border-red-500/30 bg-black/60 p-4">
+            <p className="text-xs uppercase tracking-[0.25em] text-red-400/70">Score Arena</p>
+            <p className="mt-2 text-sm text-slate-300">
+              Keep the momentum going with a quick centering challenge.
+            </p>
+            <Link
+              href="/CenterMatchGame"
+              className="mt-4 inline-flex items-center justify-center rounded-full border border-red-500/50 bg-red-600 px-8 py-3 text-sm font-semibold text-white transition hover:bg-red-500 focus:outline-none focus:ring-2 focus:ring-red-400"
+            >
+              Center Match Game
+            </Link>
+          </div>
         </div>
       </div>
     );
