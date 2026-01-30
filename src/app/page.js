@@ -1,8 +1,21 @@
+"use client";
+
 import Link from "next/link";
 
 export default function Home() {
+	const handleReset = () => {
+		localStorage.clear();
+	};
+
 	return (
-		<div className="infesta-animated-bg h-screen w-full px-6 text-white">
+		<div className="infesta-animated-bg relative h-screen w-full px-6 text-white">
+			<button
+				type="button"
+				onClick={handleReset}
+				className="absolute right-6 top-6 inline-flex items-center justify-center rounded-full px-4 py-2 text-xs font-semibold text-white transition hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-300 sm:text-sm"
+			>
+				Reset Progress
+			</button>
 			<div className="mx-auto flex h-full w-full max-w-4xl flex-col items-center justify-center gap-10 text-center">
 				<div className="space-y-4">
 					<p className="text-xs uppercase tracking-[0.4em] ">
@@ -42,7 +55,13 @@ export default function Home() {
 							href="/Quiz"
 							className="inline-flex items-center justify-center rounded-full border border-red-500/50 bg-red-600 px-8 py-3 text-sm font-semibold text-white transition hover:bg-red-500 focus:outline-none focus:ring-2 focus:ring-red-400"
 						>
-							Enter the Quiz Arena
+						Lvl:1 Enter the Quiz Arena
+						</Link>
+						<Link
+							href="/CenterMatchGame"
+							className="inline-flex items-center justify-center rounded-full border border-red-500/50 bg-red-600 px-8 py-3 text-sm font-semibold text-white transition hover:bg-red-500 focus:outline-none focus:ring-2 focus:ring-red-400"
+						>
+						Lvl:2 Enter the Center Match Game
 						</Link>
 						<p className="text-xs text-red-400/70">
 							Tap to start the Infesta frontend game.
