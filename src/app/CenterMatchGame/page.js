@@ -10,8 +10,7 @@ export default function CssCenterGame() {
   const [accessChecked, setAccessChecked] = useState(false);
 
   const [cssInput, setCssInput] = useState(
-`left: 0px;
-top: 0px;`
+
   );
 
   const [score, setScore] = useState(0);
