@@ -1,5 +1,4 @@
 "use client";
-
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
@@ -53,7 +52,6 @@ export default function Quiz() {
   ];
 
   const [quizQuestions, setQuizQuestions] = useState([]);
-
   const [current, setCurrent] = useState(0);
   const [score, setScore] = useState(0);
   const [finish, setFinish] = useState(false);

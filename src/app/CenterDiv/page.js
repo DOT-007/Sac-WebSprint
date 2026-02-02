@@ -54,7 +54,7 @@ export default function CssCenterGame() {
 
     setScore(match.toFixed(2));
 
-    if (match >= 90) {
+    if (match >= 95) {
       setResult("🎉 Perfect Center! You Win");
       localStorage.setItem("lvl", "00x2");
       setHasWon(true);
@@ -144,7 +144,7 @@ export default function CssCenterGame() {
                 </div>
                 <p className="mt-4 text-lg font-semibold text-slate-100">{result || "Try to center the block"}</p>
                 <p className="mt-2 text-xs text-slate-400">
-                  Aim for 90% or higher to win.
+                  Aim for 95% or higher to win.
                 </p>
               </div>
 
